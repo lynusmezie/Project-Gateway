@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+        <link rel="icon" href="img/logo.ico" type="image/icon">
+        <!--Import Google Icons Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import Materialize CSS-->
+        <link rel="stylesheet" href="css/materialize.css">
+         <!--Import Font Awesome Icons-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Register | Gateway Computers</title>
+        <style>
+            p{
+                font: 20px;
+            }
+             a{
+              font:  bold;
+            }
+          header{
+            background-image: url(img/mouse.jpg);
+            background-position: center;
+            background-size: cover;
+            min-height: 800px;
+            }
+            .tabs .indicator{
+                background-color:#b71c1c;
+            }
+            .tabs .tab a:hover {
+                color: #b71c1c;
+                font:bold;
+            }
+            .tabs .tab a{
+                color: #b71c1c;
+                font:bold;
+            }
+            .tabs .tab a:focus.active{
+                color: #b71c1c;
+                background-color: transparent;
+            }
+            @media screen and (max-width: 670px){
+                header{
+                min-height: 500px;
+                }
+            }
+              
+            input:not([type]):focus:not([readonly]),
+            input[type=text]:not(.browser-default):focus:not([readonly]),
+            input[type=password]:not(.browser-default):focus:not([readonly]),
+            input[type=email]:not(.browser-default):focus:not([readonly]),
+            input[type=url]:not(.browser-default):focus:not([readonly]),
+            input[type=time]:not(.browser-default):focus:not([readonly]),
+            input[type=date]:not(.browser-default):focus:not([readonly]),
+            input[type=datetime]:not(.browser-default):focus:not([readonly]),
+            input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+            input[type=tel]:not(.browser-default):focus:not([readonly]),
+            input[type=number]:not(.browser-default):focus:not([readonly]),
+            input[type=search]:not(.browser-default):focus:not([readonly]),
+            textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #b71c1c;
+            -webkit-box-shadow: 0 1px 0 0 #b71c1c;
+                    box-shadow: 0 1px 0 0 #b71c1c;
+            }
+            .select-wrapper input.select-dropdown:focus {
+            border-bottom: 1px solid #b71c1c;
+            }
+            .dropdown-content li > a, .dropdown-content li > span {
+            font-size: 16px;
+            color: #b71c1c;
+            display: block;
+            line-height: 22px;
+            padding: 14px 16px;
+            }
+            [type="checkbox"] + span:not(.lever):before,
+            [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            z-index: 0;
+            border: 2px solid #b71c1c;
+            border-radius: 1px;
+            margin-top: 3px;
+            -webkit-transition: .2s;
+            transition: .2s;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <!--header/navbar-->
+        <header>
+            <nav class="nav-wrapper white" style="position: relative">
+                <div class="container">
+                    <a href="index.html" class="brand-logo red-text text-darken-4">
+                        <img src="img/logo_red.png" alt="gateway logo" style="width: 250px"> 
+                    </a>
+                    <a href="" class="sidenav-trigger" data-target="mobile-tab">
+                            <i class="material-icons red-text text-darken-4">menu</i>
+                        </a>
+                    <ul class="hide-on-med-and-down right">
+                        <li><a href="index.html" class="red-text text-darken-4 ">Home</a></li>
+                        <li><a href="index.html#centers" class="red-text text-darken-4">Centers</a></li>
+                        <li><a href="courses.html" target="blank" class="red-text text-darken-4">Courses</a></li>
+                        <li><a href="/summer.html" target="blank" class="red-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="#register_form" class="red-text text-darken-4">Register</a></li>
+                        <li><a href="index.html#contact" class="red-text text-darken-4">Contact</a></li>
+                    </ul>
+                    <ul class="sidenav striped" id="mobile-tab">
+                        <li><a href="index.html" class="red-text text-darken-4 ">Home</a></li>
+                        <li><a href="index.html#centers" class="red-text text-darken-4">Centers</a></li>
+                        <li><a href="courses.html" target="blank" class="red-text text-darken-4">Courses</a></li>
+                        <li><a href="/summer.html" target="blank" class="red-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="#register_form" class="red-text text-darken-4">Register</a></li>
+                        <li><a href="index.html#contact" class="red-text text-darken-4">Contact</a></li>
+                        </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <!--Welcome-->
+        <section class="section container scrollspy" id="introduction">
+            <h3 class="red-text text-darken-4">Register Today!</h3>
+            <p class="grey-text text-darken-3" style="font-size: 20px; text-align: justify">
+                Complete the form below to enjoy our packages and courses today! 
+                After successfully filling up the form and clicking on the 'Submit' button below, 
+                print out the confirmation letter and go to the nearest training center for screening and final processing. 
+            </p>
+        </section>
+        <!---Registration Form-->
+        <section class="section container scrollspy" id="register_form">
+            <h5 class="red-text text-darken-4">1. Personal Information </h5>
+            <div class="row">
+                <form class="col s12" action="" method="GET" target="_self">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input type="text" id="first_name" class="validate">
+                            <label for="first_name" class="red-text darken-4">First Name</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text" id="last_name" class="validate">
+                            <label for="last_name" class="red-text darken-4">Last Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input type="text" id="other_name" class="validate">
+                            <label for="other_name" class="red-text darken-4">Other Names</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <select class="red-text darken-4">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+                            <label class="red-text darken-4">Gender</label>
+                        </div>
+                        <div class="col s3">
+                            <label for="dob" class="red-text darken-4">Date of Birth</label>
+                             <input type="text" class="datepicker validate" id="dob">
+                        </div>
+                        <div class="input-field col s3">
+                            <select class="red-text darken-4">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                                <option value="3">Do not specify</option>
+                            </select>
+                            <label class="red-text darken-4 validate">Marital Status</label>
+                        </div>
+                        <div class="col s3 input-field">
+                            <select  id="nationality">
+                                <option value="0" selected disabled>Choose an Option</option>
+                                <option value="1">Nigerian</option>
+                                <option value="2">Other</option>
+                            </select>
+                            <label class="red-text text-darken-">Nationality</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <select id="state">
+                                <option value="0" disabled selected>Select an option</option>
+                                <option value="1">Abia</option>
+                                <option value="2">Adamawa</option>
+                                <option value="3">Akwa Ibom</option>
+                                <option value="4">Anambra</option>
+                                <option value="5">Bauchi</option>
+                                <option value="6">Bayelsa</option>
+                                <option value="7">Benue</option>
+                                <option value="8">Borno</option>
+                                <option value="9">Cross River</option>
+                                <option value="10">Delta</option>
+                                <option value="11">Ebonyi</option>
+                                <option value="12">Enugu</option>
+                                <option value="13">Edo</option>
+                                <option value="14">Ekiti</option>
+                                <option value="15">Gombe</option>
+                                <option value="16">Imo</option>
+                                <option value="17">Jigawa</option>
+                                <option value="18">Kaduna</option>
+                                <option value="19">Kano</option>
+                                <option value="20">Kastina</option>
+                                <option value="21">Kebbi</option>
+                                <option value="22">Koggi</option>
+                                <option value="23">Kwara</option>
+                                <option value="24">Lagos</option>
+                                <option value="25">Nasarawa</option>
+                                <option value="26">Niger</option>
+                                <option value="27">Ogun</option>
+                                <option value="28">Ondo</option>
+                                <option value="29">Osun</option>
+                                <option value="30">Oyo</option>
+                                <option value="31">Plateau</option>
+                                <option value="32">Rivers</option>
+                                <option value="33">Sokoto</option>
+                                <option value="34">Taraba</option>
+                                <option value="35">Yobe</option>
+                                <option value="36">Zamfara</option>
+                                <option value="37">Federal Capital Territory</option>
+                            </select>
+                            <label class="red-text darken-4">State of Origin</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input type="text"id="lga">
+                            <label for="lga" class="red-text darken-4">L.G.A.</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text"id="town">
+                            <label for="town" class="red-text darken-4">Hometown</label>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="address" class="materialize-textarea"></textarea>
+                            <label for="address" class="red-text darken-4">Your Home Address</label>
+                        </div>
+                        <div class="col input-field s8">
+                                <input id="email" type="email" class="validate">
+                                <label for="email" class="red-text darken-4">Email Address</label>
+                                <span class="helper-text" data-error="Invalid email address" data-success="Correct email address"></span>
+                            </div>
+                        <div class="input-field col s4">
+                                <input type="text" id="phone_number">
+                                <label for="number" class="red-text darken-4">Phone Number</label>
+                        </div>
+                    </div>
+                    <h5 class="red-text text-darken-4">2. Next-of-Kin Information </h5>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input type="text" id="nfirst_name">
+                            <label for="nfirst_name" class="red-text darken-4">First Name</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input type="text" id="nlast_name">
+                            <label for="nlast_name" class="red-text darken-4">Last Name</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input type="text" id="nother_name">
+                            <label for="nother_name" class="red-text darken-4">Other Names</label>
+                        </div>
+                        <div class="col s3 input-field">
+                            <select id="relationship">
+                                <option value="0" selected disabled>Pick an option</option>
+                                <option value="1">Father</option>
+                                <option value="1">Mother</option>
+                                <option value="1">Uncle</option>
+                                <option value="1">Aunt</option>
+                                <option value="1">Brother</option>
+                                <option value="1">Sister</option>
+                                <option value="1">Guardian</option>
+                            </select>
+                            <label class="red-text darken-4">Relationship</label>
+                        </div>
+                        <div class="col input-field s4">
+                                <input type="text" id="nphone">
+                                <label for="nphone" class="red-text darken-4">Phone Number</label>
+                            </div>
+                        <div class="col input-field s5">
+                            <input id="nemail" type="email" class="validate">
+                            <label for="nemail" class="red-text darken-4">Email Address</label>
+                            <span class="helper-text" data-error="Invalid email address" data-success="Correct email address"></span>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="naddress" class="materialize-textarea"></textarea>
+                            <label for="naddress" class="red-text darken-4">Address</label>
+                        </div>
+                    </div>
+                    <h5 class="red-text text-darken-4">3. Other Details</h5>
+                    <div class="row">
+                        <div class="col s4 input-field">
+                            <select id="course">
+                                <option value="0" selected disabled>Pick an option</option>
+                                <option value="1">CICT</option>
+                                <option value="2">DIT</option>
+                                <option value="3">DCA</option>
+                                <option value="4">CDP</option>
+                                <option value="5">DDIT</option>
+                                <option value="6">DCET</option>
+                                <option value="7">DDP</option>
+                                <option value="8">DWP</option>
+                                <option value="9">DPM</option>
+                                <option value="10">DCAT</option>
+                                <option value="11">CVE</option>
+                                <option value="12">DVE</option>
+                                <option value="13">CPE</option>
+                                <option value="14">DPE</option>
+                            </select>
+                            <label for="" class="red-text text-darken-4">Course Code</label>
+                            <p>Browse through our <a href="courses.html" target="_blank" class="red-text text-darken-4">courses</a> for more info.</p>
+                        </div>
+                        <div class="col s4 input-field">
+                            <select  id="payment">
+                                <option value="0" selected disabled>Pick an Option</option>
+                                <option value="1">Cash</option>
+                                <option value="2">Mobile Transfer</option>
+                                <option value="3">ATM</option>
+                                <option value="4">Bank</option>
+                                <option value="5">Other</option>
+                            </select>
+                            <label class="red-text darken-4">Mode of Payment</label>
+                        </div>
+                        <div class="col s4 input-field">
+                            <input type="text" class="datepicker" id="date">
+                            <label for="date" class="red-text darken-4">Date of Registration</label>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <p>
+                                <label>
+                                    <input type="checkbox" class="red darken-4" >
+                                    <span>I have read and accepted the policies of the training.</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s12 l6">
+                        <input type="button" value="submit" class="btn-large red darken-4 right">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="page-footer red darken-4" id="footer">
+            <div class="container">
+                <div class="row">
+                     <div class="col s12 l4">
+                        <h5 class="white-text text-darken-4">About Us</h5>
+                         <p class="white-text text-darken-4">Gateway Computers is a training institution that specializes in qualitative and comprehensive ICT Training, 
+                             enhancing the computer proficiency of individuals and organizations in Nigeria. <br><br>
+                            <a href="register.html" href="blank" class="btn white red-text text-darken-4 center">START LEARNING</a>
+                            </p>
+                    </div>
+                     <div class="col s12 l3 push-l1">
+                        <h5 class="white-text text-lighten-3">Site Navigation</h5>
+                         <ul>
+                            <li><a href="index.html#welcome" class="white-text">Home</a></li>
+                            <li><a href="#register_form" class="white-text">Register</a></li>
+                            <li><a href="courses.html" target="blank" class="white-text">Courses</a></li>
+                            <li><a href="index.html#centers" class="white-text">Centers</a></li>
+                            <li><a href="/summer.html" target="blank" class="white-text">Summer ICT Training</a></li>
+                        </ul>
+                     </div>
+                     <div class="col s12 l3 push-l2">
+                         <h5 class="grey-text text-lighten-3">Social Links</h5>
+                             <a href="www.facebook.com/gatewayabuja" target="blank">
+                                    <i class="fa fa-facebook" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                             </a>
+                             <a href="www.twitter.com/gatewayabuja" target="blank">
+                                    <i class="fa fa-twitter" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                             </a>
+                             <a href="www.instagram.com/gatewayabuja" target="blank">
+                                    <i class="fa fa-instagram" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                             </a>
+                     </div>
+                </div>
+            </div>
+            <div class="footer-copyright grey darken-4 ">
+                 <div class="container center-align grey-text text-lighten-3"> &COPY; 2019 Gateway Computers. All rights reserved.</div>
+                </div>
+            </div>
+        </footer>
+        <!--Scripts-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                $('.parallax').parallax();
+                $('.tabs').tabs();
+                $('.datepicker').datepicker({
+                    yearRange: 50
+                });
+                $('.modal').modal();
+                $('.scrollspy').scrollSpy();
+                $('select').formSelect();
+                M.updateTextFields();
+        }); </script>
+    </body>
+</html>
+             
