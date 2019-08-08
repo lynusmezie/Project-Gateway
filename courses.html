@@ -14,7 +14,7 @@
         <title>Courses | Gateway Computers</title>
         <style>
           header{
-            background-image: url(img/learning.jpg);
+            background-image: url(img/class.jpg);
             background-position: center;
             background-size: cover;
             min-height: 700px;
@@ -25,6 +25,85 @@
                 min-height: 700px;
                 }
             }
+            input:not([type]):focus:not([readonly]),
+            input[type=text]:not(.browser-default):focus:not([readonly]),
+            input[type=password]:not(.browser-default):focus:not([readonly]),
+            input[type=email]:not(.browser-default):focus:not([readonly]),
+            input[type=url]:not(.browser-default):focus:not([readonly]),
+            input[type=time]:not(.browser-default):focus:not([readonly]),
+            input[type=date]:not(.browser-default):focus:not([readonly]),
+            input[type=datetime]:not(.browser-default):focus:not([readonly]),
+            input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+            input[type=tel]:not(.browser-default):focus:not([readonly]),
+            input[type=number]:not(.browser-default):focus:not([readonly]),
+            input[type=search]:not(.browser-default):focus:not([readonly]),
+            textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #1b5e20;
+            -webkit-box-shadow: 0 1px 0 0 #1b5e20;
+                    box-shadow: 0 1px 0 0 #1b5e20;
+            }
+            .select-wrapper input.select-dropdown:focus {
+            border-bottom: 1px solid #1b5e20;
+            }
+            .dropdown-content li > a, .dropdown-content li > span {
+            font-size: 16px;
+            color: #1b5e20;
+            display: block;
+            line-height: 22px;
+            padding: 14px 16px;
+            }
+            [type="checkbox"] + span:not(.lever):before,
+            [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            z-index: 0;
+            border: 2px solid #1b5e20;
+            border-radius: 1px;
+            margin-top: 3px;
+            -webkit-transition: .2s;
+            transition: .2s;
+            }
+            [type="checkbox"]:checked + span:not(.lever):before {
+            top: -4px;
+            left: -5px;
+            width: 12px;
+            height: 22px;
+            border-top: 2px solid transparent;
+            border-left: 2px solid transparent;
+            border-right: 2px solid #1b5e20;
+            border-bottom: 2px solid #1b5e20;
+            -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+}
+
+             /* label color */
+             .input-field label {
+                color:#1b5e20;
+            }
+            /* label focus color */
+            .input-field input[type=text]:focus + label {
+                color:#1b5e20 ;
+            }
+            /* label underline focus color */
+            .input-field input[type=text]:focus {
+                border-bottom: 1px solid #1b5e20;
+                box-shadow: 0 1px 0 0 #1b5e20;
+            }
+            /* icon prefix focus color */
+            .input-field .prefix.active {
+                color:#1b5e20 ;
+            }
+            td{
+                color: #1b5e20;
+            }
         </style>
     </head>
     <body>
@@ -33,27 +112,27 @@
         <header>
             <nav class="nav-wrapper white">
                 <div class="container">
-                    <a href="index.html" class="brand-logo blue-text text-darken-4">
-                        <img src="img/logo2.png" alt="gateway logo" style="width: 250px"> 
+                    <a href="index.html" class="brand-logo green-text text-darken-4">
+                        <img src="img/logo_green.png" alt="gateway logo" style="width: 250px"> 
                     </a>
                     <a href="" class="sidenav-trigger" data-target="mobile-tab">
-                            <i class="material-icons blue-text text-darken-4">menu</i>
+                            <i class="material-icons green-text text-darken-4">menu</i>
                         </a>
                     <ul class="hide-on-med-and-down right">
-                        <li><a href="index.html#welcome" class="blue-text text-darken-4 ">Home</a></li>
-                        <li><a href="index.html#centers" class="blue-text text-darken-4">Centers</a></li>
-                        <li><a href="index.html#courses" class="blue-text text-darken-4">Courses</a></li>
-                        <li><a href="/summer.html" target="blank" class="blue-text text-darken-4">Summer ICT Training</a></li>
-                        <li><a href="register.html" class="blue-text text-darken-4">Register</a></li>
-                        <li><a href="#contact" class="blue-text text-darken-4">Contact</a></li>
+                        <li><a href="index.html#welcome" class="green-text text-darken-4 ">Home</a></li>
+                        <li><a href="index.html#centers" class="green-text text-darken-4">Centers</a></li>
+                        <li><a href="#courses" class="green-text text-darken-4">Courses</a></li>
+                        <li><a href="/summer.html" target="blank" class="green-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="/register.html" target="blank" class="green-text text-darken-4">Register</a></li>
+                        <li><a href="index.html#contact" class="green-text text-darken-4">Contact</a></li>
                     </ul>
                     <ul class="sidenav striped" id="mobile-tab">
-                        <li><a href="index.html#welcome" class="blue-text text-darken-4 ">Home</a></li>
-                        <li><a href="index.html#centers" class="blue-text text-darken-4">Centers</a></li>
-                        <li><a href="index.html#courses" class="blue-text text-darken-4">Courses</a></li>
-                        <li><a href="/summer.html" target="blank" class="blue-text text-darken-4">Summer ICT Training</a></li>
-                        <li><a href="register.html" class="blue-text text-darken-4">Register</a></li>
-                        <li><a href="#contact" class="blue-text text-darken-4">Contact</a></li>
+                        <li><a href="index.html#welcome" class="green-text text-darken-4 ">Home</a></li>
+                        <li><a href="index.html#centers" class="green-text text-darken-4">Centers</a></li>
+                        <li><a href="#courses" class="green-text text-darken-4">Courses</a></li>
+                        <li><a href="/summer.html" target="blank" class="green-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="/register.html" target="blank" class="green-text text-darken-4">Register</a></li>
+                        <li><a href="index.html#contact" class="green-text text-darken-4">Contact</a></li>
                         </ul>
                 </div>
             </nav>
@@ -61,15 +140,15 @@
 
         <!--Welcome-->
         <section class="section container scrollspy" id="courses">
-            <h3 class="blue-text text-darken-4">Our Courses</h3>
-            <p class="grey-text text-darken-3" style="font-size: 20px; text-align: justify">Below is the detailed list of the courses we offer to our propsective clinets, both organisations and individuals. Contact us for more information. </p>
+            <h3 class="green-text text-darken-4">Our Courses</h3>
+            <p class="grey-text text-darken-3" style="font-size: 20px; text-align: justify">Below is the detailed list of the courses we offer to our propsective clients, both organisations and individuals. Contact us for more information. </p>
         </section>
 
         <!--Courses-->
        <div class="container">
             <table class="centered striped ">
                 <thead style="font-size: 16px">
-                    <tr class="blue-text text-darken-4 hoverable">
+                    <tr class="green-text text-darken-4">
                         <th>Course Code</th>
                         <th>Course Name</th>
                         <th>Course Details</th>
@@ -78,7 +157,7 @@
                 </thead>
                 <tbody style="font-size: 18px">
                     <tr class="hoverable">
-                        <td>CICT</td>
+                        <td style="font-weight: bold">CICT</td>
                         <td>Certificate in Information and Communication Technology</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -92,7 +171,7 @@
                         <td>8 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DIT</td>
+                        <td style="font-weight: bold">DIT</td>
                         <td>Diploma in Information Technology</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -102,7 +181,7 @@
                         <td>8 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DCA</td>
+                        <td style="font-weight: bold">DCA</td>
                         <td>Diploma in Computer Accounting</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -113,7 +192,7 @@
                         <td>12 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>CDP</td>
+                        <td style="font-weight: bold">CDP</td>
                         <td>Certificate in Desktop Publishing</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -124,7 +203,7 @@
                         <td>4 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DDIT</td>
+                        <td style="font-weight: bold">DDIT</td>
                         <td>Diploma in Desktop Publishing and Information Technology</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -135,7 +214,7 @@
                         <td>4 Months</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DCET</td>
+                        <td style="font-weight: bold">DCET</td>
                         <td>Diploma in Computer Engineering Technology</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -148,7 +227,7 @@
                         <td>4 Months</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DDP</td>
+                        <td style="font-weight: bold">DDP</td>
                         <td>Diploma in Desktop Programming</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -162,7 +241,7 @@
                         <td>4 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DWP</td>
+                        <td style="font-weight: bold">DWP</td>
                         <td>Diploma in Web Programming</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -176,7 +255,7 @@
                         <td>4 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DPM</td>
+                        <td style="font-weight: bold">DPM</td>
                         <td>Diploma in Computer Statistics</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -186,7 +265,7 @@
                         <td>4 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DCAT</td>
+                        <td style="font-weight: bold">DCAT</td>
                         <td>Diploma in Computer Architecture</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -197,7 +276,7 @@
                         <td>4 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>AEX</td>
+                        <td style="font-weight: bold">AEX</td>
                         <td>Advanced Microsoft Excel</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -207,7 +286,7 @@
                         <td>2 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>CVE</td>
+                        <td style="font-weight: bold">CVE</td>
                         <td>Certificate in Video Editing</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -217,7 +296,7 @@
                         <td>2 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DVE</td>
+                        <td style="font-weight: bold">DVE</td>
                         <td>Diploma in Video Editing</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -227,7 +306,7 @@
                         <td>2 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>CPE</td>
+                        <td style="font-weight: bold">CPE</td>
                         <td>Certificate in Photo Editing</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -237,7 +316,7 @@
                         <td>2 Weeks</td>
                     </tr>
                     <tr class="hoverable">
-                        <td>DPE</td>
+                        <td style="font-weight: bold">DPE</td>
                         <td>Diploma in Photo Editing</td>
                         <td>
                             <ol class="left-align" type="1">
@@ -250,95 +329,22 @@
             </table>
             <br>
             <br>
-            <div class="container center-align"> <a href="/download.html" target="_blank" class="btn-large blue darken-4">Download As PDF</a>
-                <a href="/register.html" target="_blank" class="btn-large blue darken-4">REGISTER NOW!</a>
+            <div class="container center-align"> <a href="/download.html" target="_blank" class="btn-large green darken-4">Download As PDF</a>
+                <a href="/register.html" target="_blank" class="btn-large green darken-4">REGISTER NOW!</a>
             </div>
             <br>
             <br>
         </div>
 
-         <!--Parallax-->
-         <div class="parallax-container">
-                <div class="parallax">
-                    <img src="img/books.jpg" alt="books" class="responsive-img">
-                </div>
-            </div>    
-        
-        <!--Contact-->
-        <section class="section container scrollspy" id="contact">
-                <div class="row">
-                    <div class="col s12 l5">
-                        <h3 class="blue-text text-darken-4">Get In Touch</h3>
-                        <p class="grey-text text-darken-3" style="font-size: 20px; text-align: justify">Need a tip or suggestion? Making an inquiry? 
-                            Need computer repairs? Want to place a complaint? Feel free to complete the form, and we will get right back to you.</p>
-                        <a class="blue-text text-darken-4" style="font-size: 20px" href="mailto:gatewayabuja@gmail.com">
-                            <i class="material-icons blue-text text-darken-4">mail</i>gatewayabuja@gmail.com</a></p>
-                    </div>
-                    <div class="col s12 l5 offset-l2">
-                        <form action="">
-                            <div class="input-field">
-                                <input type="text" id="name">
-                                <label style="color: #01579b;" for="name">Your Name</label>
-                            </div>
-                            <div class="input-field">
-                                <input type="email" id="email" class="validate">
-                                <label style="color: #01579b;"for="email">E-mail Address</label>
-                                <span class="helper-text" data-error="invalid email" data-success="correct email">example@mail.com</span>
-                            </div>
-                            <div class="input-field">
-                                <textarea id="message" class="materialize-textarea"></textarea>
-                                <label style="color: #01579b;"for="message">Message</label>
-                            </div>
-                            <div class="input-field">
-                                <p>Choose A Service</p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox">
-                                        <span>Courses</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox">
-                                        <span>Trianing Centers</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox">
-                                        <span>ICT Summer Training</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox">
-                                        <span>Repairs</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input type="checkbox">
-                                        <span>Consultancy</span>
-                                    </label>
-                                </p>
-                            </div>
-                            <div class="input-field center">
-                                <button class="btn blue darken-4">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
         <!--Footer-->
-        <footer class="page-footer blue darken-4" id="footer">
+        <footer class="page-footer green darken-4" id="footer">
             <div class="container">
                 <div class="row">
                         <div class="col s12 l4">
                         <h5 class="white-text text-darken-4">About Us</h5>
                             <p class="white-text text-darken-4">Gateway Computers is a training institution that specializes in qualitative and comprehensive ICT Training, 
                                 enhancing the computer proficiency of individuals and organizations in Nigeria. <br><br>
-                            <a href="register.html" href="blank" class="btn white blue-text text-darken-4 center">START LEARNING</a>
+                            <a href="register.html" href="blank" class="btn white green-text text-darken-4 center">START LEARNING</a>
                             </p>
                     </div>
                     <div class="col s12 l3 push-l1">
@@ -373,9 +379,11 @@
         <script src="js/materialize.min.js"></script>
         <script>
             $(document).ready(function(){
+                $('.sidenav').sidenav();
                 $('.parallax').parallax();
                 $('.scrollspy').scrollSpy();
             }); 
-            </script>
+        </script>
+
     </body>
 </html>

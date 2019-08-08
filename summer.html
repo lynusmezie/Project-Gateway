@@ -7,28 +7,31 @@
         <link rel="shortcut icon" href="img/gateway.ico" type="image/x-icon">
         <link rel="icon" href="img/gateway.ico" type="image/icon">
         <link rel="stylesheet" href="css/materialize.css">
+        <!--Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import Font Awesome Icons-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Summer ICT Training | Gateway Computers</title>
         <style>
              header{
             background-image: url(img/codingkids.png);
             background-position: center;
             background-size: cover;
-            min-height: 500px;
+            min-height: 700px;
             }
               .tabs .indicator{
-                background-color:#e65100;
+                background-color:#880e4f;
             }
             .tabs .tab a:hover {
-                color: #e65100;
+                color: #880e4f;
                 font:bold;
             }
             .tabs .tab a{
-                color:#e65100;
+                color:#880e4f;
                 font:bold;
             }
             .tabs .tab a:focus.active{
-                color: #e65100;
+                color: #880e4f;
                 background-color: transparent;
             }
             @media screen and (max-width: 670px){
@@ -38,20 +41,15 @@
             }
               /* label color */
             .input-field label {
-                color:#e65100;
+                color:#880e4f;
             }
             /* label focus color */
             .input-field input[type=text]:focus + label {
                 color: #e65100;
             }
-            /* label underline focus color */
-            .input-field input[type=text]:focus {
-                border-bottom: 1px solid #e65100;
-                box-shadow: 0 1px 0 0 #e65100;
-            }
             /* icon prefix focus color */
             .input-field .prefix.active {
-                color: #e65100;
+                color: #880e4f;
             }
             [type="checkbox"] + span:not(.lever):before,
             [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
@@ -62,28 +60,45 @@
             width: 18px;
             height: 18px;
             z-index: 0;
-            border: 2px solid #e65100;
+            border: 2px solid #880e4f;
             border-radius: 1px;
             margin-top: 3px;
             -webkit-transition: .2s;
             transition: .2s;
             }
             [type="checkbox"]:checked + span:not(.lever):before {
-  top: -4px;
-  left: -5px;
-  width: 12px;
-  height: 22px;
-  border-top: 2px solid transparent;
-  border-left: 2px solid transparent;
-  border-right: 2px solid #e65100;
-  border-bottom: 2px solid #e65100;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
-}
+            top: -4px;
+            left: -5px;
+            width: 12px;
+            height: 22px;
+            border-top: 2px solid transparent;
+            border-left: 2px solid transparent;
+            border-right: 2px solid #880e4f;
+            border-bottom: 2px solid #880e4f;
+            -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            }
+            input:not([type]):focus:not([readonly]),
+            input[type=text]:not(.browser-default):focus:not([readonly]),
+            input[type=password]:not(.browser-default):focus:not([readonly]),
+            input[type=email]:not(.browser-default):focus:not([readonly]),
+            input[type=url]:not(.browser-default):focus:not([readonly]),
+            input[type=time]:not(.browser-default):focus:not([readonly]),
+            input[type=date]:not(.browser-default):focus:not([readonly]),
+            input[type=datetime]:not(.browser-default):focus:not([readonly]),
+            input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+            input[type=tel]:not(.browser-default):focus:not([readonly]),
+            input[type=number]:not(.browser-default):focus:not([readonly]),
+            input[type=search]:not(.browser-default):focus:not([readonly]),
+            textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #880e4f;
+            -webkit-box-shadow: 0 1px 0 0 #880e4f;
+            box-shadow: 0 1px 0 0 #880e4f;
+            }
 
         </style>
     </head>
@@ -93,58 +108,59 @@
             <nav class="nav-wrapper white" >
                 <div class="container">
                     <a href="index.html" class="brand-logo">
-                         <img src="img/logo_orange.png" alt="gateway logo" style="width: 250px"> 
+                         <img src="img/logo_purple.png" alt="gateway logo" style="width: 250px"> 
                      </a>
-                    <a href="" class="sidenav-trigger" data-target="mobile-tab">
-                        <i class="material-icons orange-text text-darken-4">menu</i>
+                    <a href="" class="sidenav-trigger striped" data-target="mobile-tab">
+                        <i class="material-icons pink-text text-darken-4">menu</i>
                      </a>
                     <ul class="hide-on-med-and-down right">
-                        <li><a href="index.html" class="orange-text text-darken-4 ">Home</a></li>
-                        <li><a href="index.html" class="orange-text text-darken-4">Centers</a></li>
-                        <li><a href="courses.html" class="orange-text text-darken-4">Courses</a></li>
-                        <li><a href="/summer.html" class="orange-text text-darken-4">Summer ICT Training</a></li>
-                        <li><a href="#contact" class="orange-text text-darken-4">Contact</a></li>
+                        <li><a href="index.html" class="pink-text text-darken-4 ">Home</a></li>
+                        <li><a href="index.html#centers" class="pink-text text-darken-4">Centers</a></li>
+                        <li><a href="index.html#courses" class="pink-text text-darken-4">Courses</a></li>
+                        <li><a href="#summer" class="pink-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="/register.html" target="_blank" class="pink-text text-darken-4">Register</a></li>
+                        <li><a href="#contact" class="pink-text text-darken-4">Contact</a></li>
                     </ul>
                     <ul class="sidenav" id="mobile-tab">
-                        <li><a href="index.html" class="orange-text text-darken-4">Home</a></li>
-                        <li><a href="index.html" class="orange-text text-darken-4">Centers</a></li>
-                        <li><a href="courses.html" class="orange-text text-darken-4">Courses</a></li>
-                        <li><a href="/summer.html" class="orange-text text-darken-4">Summer ICT Training</a></li>
-                        <li><a href="#contact" class="orange-text text-darken-4">Contact</a></li>
+                        <li><a href="index.html" class="pink-text text-darken-4 ">Home</a></li>
+                        <li><a href="index.html#centers" class="pink-text text-darken-4">Centers</a></li>
+                        <li><a href="index.html#courses" class="pink-text text-darken-4">Courses</a></li>
+                        <li><a href="#summer" class="pink-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="/register.html" target="_blank" class="pink-text text-darken-4">Register</a></li>
+                        <li><a href="#contact" class="pink-text text-darken-4">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
+
         <!--2019 Summer  Introduction-->
         <section class="section container scrollspy" id="summer">
-            <h3 class="orange-text text-darken-4">Summer ICT Training</h3>
+            <h3 class="pink-text text-darken-4">Summer ICT Training</h3>
             <p class="grey-text text-darken-3" style="font-size: 20px; text-align: justify">Every summer, most kids and teens are on holiday, after successfully completing another academic year. 
                 Parents always want their children to be productive and engaged during these holidays. 
                 Gateway Computers organizes a special ICT Training programme, with these kids and teens in mind. The training is aimed at equipping children with the appropriate ICT skills , giving them a strong start in ICT and its related courses.
                 This training will not just help them in their higher education, but will also be an added advantage that will broaden the choices they make in life. With interactive class sessions, educational games, excursions and team activities, they will have the opportunity to learn new things while having fun!</p>
         </section>
-        <!--2019 Summer Program-->
+
+        <!--2019 Summer Programs-->
          <div class="container scrollspy" id="programme">
-            <h3 class="orange-text text-darken-4">Our Summer Programs</h3>
+            <h3 class="pink-text text-darken-4">Our Summer Programs</h3>
             <p class="grey-text text-darken-3"style="font-size: 20px; text-align: justify">The Programs for the Summer ICT Training are similar to our regular courses but has been streamlined or minified to accomodate  the level of learning of the kids and teenagers. 
-                    Advanced courses such as Coding, Graphics Design, Microsoft Excel,  & Web Design have been simplified so that the kids can easily grasp their concepts. Click <a href=""class="orange-text text-darken-4">here</a>  to apply now.
+                    Advanced courses such as Coding, Graphics Design, Microsoft Excel,  & Web Design have been simplified so that the kids can easily grasp their concepts. Click <a href="/register.html" target="_blank" class="pink-text text-darken-4">here</a>  to apply now.
             </p>
-            <div class="container center"><a href="" class="btn orange darken-4">APPLY NOW!</a></div> 
+            <div class="container center"><a href="/register.html" target="_blank"  class="btn-large pink darken-4">APPLY NOW!</a></div> 
             <br>
             <br>
             <div class="row">
                 <div class="col s12 l6">
                         <div class="card medium hoverable">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img src="img/youths.jpg" class="activator">
-                            </div>
+                            <div class="card-image waves-effect waves-block waves-light"><img src="img/youths.jpg" class="activator"></div>
                             <div class="card-content">
-                                <span class="card-title activator orange-text text-darken-4">Microsoft Office Suite</span>
+                                <span class="card-title activator pink-text text-darken-4">Microsoft Office Suite</span>
                                 <p class="activator grey-text text-darken-3" style="font-size: 20px">Get a firm grasp of the basic packages in the Microsoft Office Suite. Click to view content.</p>
                             </div>
-                            
                             <div class="card-reveal">
-                                <span class="card-title orange-text text-darken-4">Courses<i class="material-icons right">close</i></span>
+                                <span class="card-title pink-text text-darken-4">Courses<i class="material-icons right">close</i></span>
                                 <p class="grey-text text-darken-3">
                                 <ul>
                                     <li style="font-size: 20px">Microsoft Word</li>
@@ -165,11 +181,11 @@
                             <img src="img/threegirls.jpg" class="activator">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator orange-text text-darken-4">Graphic Design</span>
+                            <span class="card-title activator pink-text text-darken-4">Graphic Design</span>
                             <p class="activator grey-text text-darken-3" style="font-size: 20px">Learn how to make flyers, jotters, exercise books, business cards etc. Click to view content.</p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title orange-text text-darken-4">Courses<i class="material-icons right">close</i></span>
+                            <span class="card-title pink-text text-darken-4">Courses<i class="material-icons right">close</i></span>
                             <p class="grey-text text-darken-3">
                             <ul>
                                 <li style="font-size: 20px">CorelDraw Graphics Suite</li>
@@ -188,11 +204,11 @@
                             <img src="img/teenager.jpg" class="activator">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator orange-text text-darken-4">Web Coding</span>
-                            <p class="activator grey-text text-darken-3" style="font-size: 20px">Create your first website, youreslf! Click to view content.</p>
+                            <span class="card-title activator pink-text text-darken-4">Web Coding</span>
+                            <p class="activator grey-text text-darken-3" style="font-size: 20px">Create your first website, yourself! Click to view content.</p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title orange-text text-darken-4">Courses<i class="material-icons right">close</i></span>
+                            <span class="card-title pink-text text-darken-4">Courses<i class="material-icons right">close</i></span>
                             <p class="grey-text text-darken-3">
                             <ul>
                                 <li style="font-size: 20px">HTML5</li>
@@ -211,11 +227,11 @@
                             <img src="img/h.jpg" class="activator">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator orange-text text-darken-4">Game Development</span>
+                            <span class="card-title activator pink-text text-darken-4">Game Development</span>
                             <p class="activator grey-text text-darken-3" style="font-size: 20px">Design your own game, and share with frends! Click to view content.</p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title orange-text text-darken-4">Courses<i class="material-icons right">close</i></span>
+                            <span class="card-title pink-text text-darken-4">Courses<i class="material-icons right">close</i></span>
                             <p class="grey-text text-darken-3">
                             <ul>
                                 <li style="font-size: 20px">Visual Studio</li>
@@ -234,11 +250,11 @@
                             <img src="img/repairs.jpg" class="activator">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator orange-text text-darken-4">Computer Repairs</span>
+                            <span class="card-title activator pink-text text-darken-4">Computer Repairs</span>
                             <p class="activator grey-text text-darken-3" style="font-size: 20px">Learn to setup, troubleshoot and fix Laptop and Desktop PCs. Click to view content.</p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title orange-text text-darken-4">Courses<i class="material-icons right">close</i></span>
+                            <span class="card-title pink-text text-darken-4">Courses<i class="material-icons right">close</i></span>
                             <p class="grey-text text-darken-3">
                                 <ul>
                                     <li style="font-size: 20px">Troubleshooting Techniques</li>
@@ -257,11 +273,11 @@
                             <img src="img/blackgirl.jpg" class="activator">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator orange-text text-darken-4">Video Editing</span>
+                            <span class="card-title activator pink-text text-darken-4">Video Editing</span>
                             <p class="activator grey-text text-darken-3" style="font-size: 20px">Learn how to create animations and how to edit videos. Click to view content.</p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title orange-text text-darken-4">Courses<i class="material-icons right">close</i></span>
+                            <span class="card-title pink-text text-darken-4">Courses<i class="material-icons right">close</i></span>
                             <p class="grey-text text-darken-3">
                                 <ul>
                                     <li style="font-size: 20px">Adobe Premiere Pro</li>
@@ -274,102 +290,123 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <br>
-                        <h3 class="orange-text text-darken-4 center">IFEPS - Our Premium Partner</h3>
-                        <p class="grey-text text-darken-3"style="font-size: 20px; text-align: justify">
-                            Gateway Computers has partnered with the Institute For Ethics and Professional Studies (IFEPS) to provide a special course to the kids and teens that are participating in the Summer ICT Training.
-                            This course specializes on the character development, public speaking, people interaction, and career goals of the students. Arrangements are been made for all students to participate in the course. Also available to the students are Language classes; French, German and Spanish.
-                        </p>
-                        <div class="container center"><a href="" class="btn orange darken-4">APPLY FOR SUMMER ICT TRAINING NOW!</a></div> 
-                        <br>
-                </div>
-
             </div>
          </div>
+
+         <!--IFEPS Partnership-->
+         <div class="container">
+                <br>
+                    <h3 class="pink-text text-darken-4">IFEPS - Our Premium Partner</h3>
+                    <p class="grey-text text-darken-3"style="font-size: 20px; text-align: justify">
+                        Gateway Computers has partnered with the Institute For Ethics and Professional Studies (IFEPS) to provide a special course to the kids and teens that are participating in the Summer ICT Training.
+                        This course specializes on the character development, public speaking, people interaction, and career goals of the students. Arrangements are been made for all students to participate in the course. Also available to the students are Language classes; French, German and Spanish.
+                    </p>
+                    <br>
+                    <div class="container center"><a href="register.html" target="_blank" class="btn-large pink darken-4">APPLY FOR SUMMER ICT TRAINING NOW!</a></div> 
+                    <br><br>
+        </div>
+
          <!--Parallax A-->
          <div class="parallax-container hide-on-med-and-down" id="parallax_a">
             <div class="parallax">
                     <img src="img/summer.jpg" alt="" class="responsive-img">
                 </div>
         </div>
-        <!--Contact/Form-->
+        
+        <!--Contact-->
         <section class="section container scrollspy" id="contact">
             <div class="row">
                 <div class="col s12 l5">
-                    <h3 class="orange-text text-darken-4">Contact Us</h3>
-                    <p class="grey-text text-darken-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae numquam soluta tempora esse!
-                            Iste molestias a facilis nam, alias ad voluptate, maxime totam modi et numquam. Modi soluta repellendus facilis.</p>
+                    <h3 class="pink-text text-darken-4">Get In Touch</h3>
+                    <p class="grey-text text-darken-3" style="font-size: 20px; text-align: justify">Need a tip or suggestion? Making an inquiry? 
+                        Need computer repairs? Want to place a complaint? Feel free to complete the form, and we will get right back to you.</p>
                 </div>
                 <div class="col s12 l5 offset-l2">
                     <form action="">
                         <div class="input-field">
-                            <input type="text" id="name">
-                            <label  style="color: #e65100;"for="name">Your Name</label>
+                            <input type="text" id="name" class="validate" required data-length="15">
+                            <label style="color: #880e4f;" for="name">Your Name</label>
+                            <span class="helper-text" data-error="please enter a name" data-success="">eg. John Doe</span>
                         </div>
                         <div class="input-field">
-                            <input type="email" id="email" class="validate">
-                            <label style="color: #e65100;" for="email">E-mail Address</label>
+                            <input type="email" id="email" class="validate" required>
+                            <label style="color: #880e4f;"for="email">E-mail Address</label>
                             <span class="helper-text" data-error="invalid email" data-success="correct email">example@mail.com</span>
                         </div>
                         <div class="input-field">
-                            <textarea id="message" class="materialize-textarea"></textarea>
-                            <label style="color: #e65100;" for="message">Message</label>
+                            <textarea id="message" class="materialize-textarea validate" data-length="100"></textarea>
+                            <label style="color: #880e4f;"for="message">Message</label>
                         </div>
-                        <div class="input-field">
+                        <div class="input-field validate">
                             <p>Choose A Service</p>
                             <p>
-                                <label style="color: #e65100;">
-                                    <input type="checkbox" style="color: #e65100;">
-                                    <span>Training</span>
+                                <label>
+                                    <input type="checkbox" class="validate">
+                                    <span>Courses</span>
                                 </label>
                             </p>
                             <p>
-                                <label style="color: #e65100;">
+                                <label>
                                     <input type="checkbox">
-                                    <span>Consultancy</span>
+                                    <span>Training Centers</span>
                                 </label>
                             </p>
                             <p>
-                                <label style="color: #e65100;">
+                                <label>
                                     <input type="checkbox">
-                                    <span>Repairs</span>
+                                    <span>ICT Summer Training</span>
                                 </label>
                             </p>
                         </div>
                         <div class="input-field center">
-                            <button class="btn orange darken-4">Submit</button>
+                            <button class="btn-large pink darken-4">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
-        <!--footer-->
-        <footer class="page-footer orange darken-4" id="footer">
+            
+      <!--Footer-->
+      <footer class="page-footer pink darken-4" id="footer">
             <div class="container">
                 <div class="row">
-                     <div class="col s12 l4 offset-2">
+                     <div class="col s12 l4">
                         <h5 class="white-text text-darken-4">About Us</h5>
-                         <p class="white-text text-darken-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas rerum iste sint corrupti adipisci
-                                impedit assumenda facere amet aliquam omnis obcaecati, 
-                                iusto id magni eaque quis sed tenetur! Qui, itaque.</p>
+                         <p class="white-text text-darken-4">Gateway Computers is a training institution that specializes in qualitative and comprehensive ICT Training, 
+                             enhancing the computer proficiency of individuals and organizations in Nigeria. <br><br>
+                            <a href="/register.html" target="_blank" class="btn white pink-text text-darken-4 center">START LEARNING</a>
+                            </p>
                     </div>
-                     <div class="col s12 l4 offset-l3">
-                        <h5 class="grey-text text-lighten-3">Social Links</h5>
+                     <div class="col s12 l3 push-l1">
+                        <h5 class="white-text text-lighten-3">Site Navigation</h5>
                          <ul>
-                            <li><a href="#" class="grey-text text-lighten-3">Facebook</a></li>
-                            <li><a href="#" class="grey-text text-lighten-3">Instagram</a></li>
-                            <li><a href="#" class="grey-text text-lighten-3">Whatsapp</a></li>
-                            <li><a href="#" class="grey-text text-lighten-3">Twitter</a></li>
+                            <li><a href="/index.html" class="white-text">Home</a></li>
+                            <li><a href="/register.html" target="_blank" class="white-text">Register</a></li>
+                            <li><a href="/courses.html" target="_blank" class="white-text">Courses</a></li>
+                            <li><a href="index.html#centers" class="white-text">Centers</a></li>
+                            <li><a href="/summer.html" target="_blank" class="white-text">Summer ICT Training</a></li>
                         </ul>
                      </div>
+                     <div class="col s12 l3 push-l1">
+                            <h5 class="white-text text-lighten-3">Social Links</h5>
+                                <a href="www.facebook.com/gatewayabuja" target="blank">
+                                       <i class="fa fa-facebook" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                                </a>
+                                <a href="www.twitter.com/gatewayabuja" target="blank">
+                                       <i class="fa fa-twitter" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                                </a>
+                                <a href="www.instagram.com/gatewayabuja" target="blank">
+                                       <i class="fa fa-instagram" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                                </a>
+                        </div>
                 </div>
             </div>
             <div class="footer-copyright grey darken-4 ">
-                 <div class="container center-align grey-text text-lighten-3"> &COPY; 2019 Gateway Computers</div>
+                 <div class="container center-align grey-text text-lighten-3"> &COPY; 2019 Gateway Computers. All rights reserved.</div>
                 </div>
             </div>
         </footer>
+
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/materialize.min.js"></script>
         <script>
@@ -378,6 +415,8 @@
             $('.parallax').parallax();
             $('.tabs').tabs();
             $('.scrollspy').scrollSpy();
-            });</script>
+            $('input#name, textarea#message').characterCounter();
+            });
+        </script>
     </body>
 </html>

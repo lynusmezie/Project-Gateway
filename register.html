@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-        <link rel="icon" href="img/logo.ico" type="image/icon">
+        <link rel="shortcut icon" href="img/gateway.ico" type="image/x-icon">
+        <link rel="icon" href="img/gateway.ico" type="image/icon">
         <!--Import Google Icons Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import Materialize CSS-->
@@ -89,6 +89,23 @@
             -webkit-transition: .2s;
             transition: .2s;
             }
+            [type="checkbox"]:checked + span:not(.lever):before {
+            top: -4px;
+            left: -5px;
+            width: 12px;
+            height: 22px;
+            border-top: 2px solid transparent;
+            border-left: 2px solid transparent;
+            border-right: 2px solid #b71c1c;
+            border-bottom: 2px solid #b71c1c;
+            -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+}
+
 
         </style>
     </head>
@@ -128,65 +145,54 @@
         <section class="section container scrollspy" id="introduction">
             <h3 class="red-text text-darken-4">Register Today!</h3>
             <p class="grey-text text-darken-3" style="font-size: 20px; text-align: justify">
-                Complete the form below to enjoy our packages and courses today! 
-                After successfully filling up the form and clicking on the 'Submit' button below, 
-                print out the confirmation letter and go to the nearest training center for screening and final processing. 
+                Complete the form below to enjoy our programs and courses today! 
+                After filling the form, click on the 'Submit' button below to save the data you have provided. 
+               Go to any of our training centers nearest to you to complete the registration process. The list of our training centers can be found on the <a href="/index.html" target="_blank" class="red-text text-darken-4" >Homepage</a>  of this website. 
             </p>
         </section>
         <!---Registration Form-->
         <section class="section container scrollspy" id="register_form">
             <h5 class="red-text text-darken-4">1. Personal Information </h5>
             <div class="row">
-                <form class="col s12" action="" method="GET" target="_self">
+                <form action="">
                     <div class="row">
-                        <div class="input-field col s3">
-                            <input type="text" id="first_name" class="validate">
-                            <label for="first_name" class="red-text darken-4">First Name</label>
+                        <div class="input-field col s12 l4">
+                            <input type="text" id="first_name" class="validate" required>
+                            <label for="first_name" class="red-text text-darken-4">First Name*</label>
                         </div>
-                        <div class="input-field col s3">
-                            <input type="text" id="last_name" class="validate">
-                            <label for="last_name" class="red-text darken-4">Last Name</label>
+                        <div class="input-field col s12 l4">
+                            <input type="text" id="last_name" class="validate" required>
+                            <label for="last_name" class="red-text text-darken-4">Last Name*</label>
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s12 l4">
                             <input type="text" id="other_name" class="validate">
-                            <label for="other_name" class="red-text darken-4">Other Names</label>
+                            <label for="other_name" class="red-text text-darken-4">Other Names</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s3">
-                            <select class="red-text darken-4">
-                                <option value="" disabled selected>Choose your option</option>
+                        <div class="input-field col s12 l4">
+                            <select class="red-text darken-4 validate" required>
                                 <option value="1">Male</option>
                                 <option value="2">Female</option>
                             </select>
-                            <label class="red-text darken-4">Gender</label>
+                            <label class="red-text text-darken-4">Gender*</label>
                         </div>
-                        <div class="col s3">
-                            <label for="dob" class="red-text darken-4">Date of Birth</label>
-                             <input type="text" class="datepicker validate" id="dob">
+                        <div class="input-field col s12 l4">
+                            <label for="dob" class="red-text text-darken-4">Date of Birth*</label>
+                             <input type="text" class="datepicker validate" id="dob" required>
                         </div>
-                        <div class="input-field col s3">
-                            <select class="red-text darken-4">
-                                <option value="" disabled selected>Choose your option</option>
+                        <div class="input-field col s12 l4">
+                            <select class="red-text text-darken-4 validate" required>
                                 <option value="1">Single</option>
                                 <option value="2">Married</option>
                                 <option value="3">Do not specify</option>
                             </select>
-                            <label class="red-text darken-4 validate">Marital Status</label>
-                        </div>
-                        <div class="col s3 input-field">
-                            <select  id="nationality">
-                                <option value="0" selected disabled>Choose an Option</option>
-                                <option value="1">Nigerian</option>
-                                <option value="2">Other</option>
-                            </select>
-                            <label class="red-text text-darken-">Nationality</label>
+                            <label class="red-text text-darken-4">Marital Status*</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s4">
+                        <div class="input-field col s12 l4">
                             <select id="state">
-                                <option value="0" disabled selected>Select an option</option>
                                 <option value="1">Abia</option>
                                 <option value="2">Adamawa</option>
                                 <option value="3">Akwa Ibom</option>
@@ -225,76 +231,39 @@
                                 <option value="36">Zamfara</option>
                                 <option value="37">Federal Capital Territory</option>
                             </select>
-                            <label class="red-text darken-4">State of Origin</label>
+                            <label class="red-text text-darken-4">State of Origin*</label>
                         </div>
-                        <div class="input-field col s5">
-                            <input type="text"id="lga">
-                            <label for="lga" class="red-text darken-4">L.G.A.</label>
+                        <div class="input-field col s12 l4">
+                            <input type="text" id="phone_number">
+                            <label for="number" class="red-text text-darken-4">Phone Number*</label>
                         </div>
-                        <div class="input-field col s3">
-                            <input type="text"id="town">
-                            <label for="town" class="red-text darken-4">Hometown</label>
-                        </div>
-                    </div>    
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="address" class="materialize-textarea"></textarea>
-                            <label for="address" class="red-text darken-4">Your Home Address</label>
-                        </div>
-                        <div class="col input-field s8">
+                        <div class="input-field col s12 l4">
                                 <input id="email" type="email" class="validate">
-                                <label for="email" class="red-text darken-4">Email Address</label>
+                                <label for="email" class="red-text text-darken-4">Email Address</label>
                                 <span class="helper-text" data-error="Invalid email address" data-success="Correct email address"></span>
-                            </div>
-                        <div class="input-field col s4">
-                                <input type="text" id="phone_number">
-                                <label for="number" class="red-text darken-4">Phone Number</label>
                         </div>
+                       
                     </div>
+                    <br>
                     <h5 class="red-text text-darken-4">2. Next-of-Kin Information </h5>
                     <div class="row">
-                        <div class="input-field col s4">
+                        <div class="input-field col s12 l4">
                             <input type="text" id="nfirst_name">
-                            <label for="nfirst_name" class="red-text darken-4">First Name</label>
+                            <label for="nfirst_name" class="red-text text-darken-4">First Name*</label>
                         </div>
-                        <div class="input-field col s4">
+                        <div class="input-field col s12 l4">
                             <input type="text" id="nlast_name">
-                            <label for="nlast_name" class="red-text darken-4">Last Name</label>
+                            <label for="nlast_name" class="red-text text-darken-4">Last Name*</label>
                         </div>
-                        <div class="input-field col s4">
-                            <input type="text" id="nother_name">
-                            <label for="nother_name" class="red-text darken-4">Other Names</label>
-                        </div>
-                        <div class="col s3 input-field">
-                            <select id="relationship">
-                                <option value="0" selected disabled>Pick an option</option>
-                                <option value="1">Father</option>
-                                <option value="1">Mother</option>
-                                <option value="1">Uncle</option>
-                                <option value="1">Aunt</option>
-                                <option value="1">Brother</option>
-                                <option value="1">Sister</option>
-                                <option value="1">Guardian</option>
-                            </select>
-                            <label class="red-text darken-4">Relationship</label>
-                        </div>
-                        <div class="col input-field s4">
-                                <input type="text" id="nphone">
-                                <label for="nphone" class="red-text darken-4">Phone Number</label>
-                            </div>
-                        <div class="col input-field s5">
-                            <input id="nemail" type="email" class="validate">
-                            <label for="nemail" class="red-text darken-4">Email Address</label>
-                            <span class="helper-text" data-error="Invalid email address" data-success="Correct email address"></span>
-                        </div>
-                        <div class="input-field col s12">
-                            <textarea id="naddress" class="materialize-textarea"></textarea>
-                            <label for="naddress" class="red-text darken-4">Address</label>
+                        <div class="col input-field s12 l4">
+                            <input type="text" id="nphone">
+                            <label for="nphone" class="red-text text-darken-4">Phone Number*</label>
                         </div>
                     </div>
+                    <br>
                     <h5 class="red-text text-darken-4">3. Other Details</h5>
                     <div class="row">
-                        <div class="col s4 input-field">
+                        <div class="input-field col s12 l4">
                             <select id="course">
                                 <option value="0" selected disabled>Pick an option</option>
                                 <option value="1">CICT</option>
@@ -312,10 +281,10 @@
                                 <option value="13">CPE</option>
                                 <option value="14">DPE</option>
                             </select>
-                            <label for="" class="red-text text-darken-4">Course Code</label>
-                            <p>Browse through our <a href="courses.html" target="_blank" class="red-text text-darken-4">courses</a> for more info.</p>
+                            <label for="" class="red-text text-darken-4">Course Code*</label>
+                            <p>Browse through our <a href="/courses.html" target="_blank" class="red-text text-darken-4">courses</a> for more info.</p>
                         </div>
-                        <div class="col s4 input-field">
+                        <div class="input-field col s12 l4">
                             <select  id="payment">
                                 <option value="0" selected disabled>Pick an Option</option>
                                 <option value="1">Cash</option>
@@ -324,24 +293,57 @@
                                 <option value="4">Bank</option>
                                 <option value="5">Other</option>
                             </select>
-                            <label class="red-text darken-4">Mode of Payment</label>
+                            <label class="red-text text-darken-4">Mode of Payment*</label>
                         </div>
-                        <div class="col s4 input-field">
-                            <input type="text" class="datepicker" id="date">
-                            <label for="date" class="red-text darken-4">Date of Registration</label>
+                        <div class="input-field col s12 l4">
+                            <input type="text" class="datepicker validate" id="date">
+                            <label for="date" class="red-text text-darken-4 validate">Date of Registration*</label>
+                        </div>
                     </div>
-                    </div>
+                    <br>
                     <div class="row">
-                        <div class="col s12 l6">
+                        <div class="col s12 l12">    
                             <p>
                                 <label>
-                                    <input type="checkbox" class="red darken-4" >
-                                    <span>I have read and accepted the policies of the training.</span>
+                                    <input type="checkbox" class="red-text text-darken-4" required>
+                                    <span class="black-text" style="font-size: 20px">I have read and accepted the <a href="#terms" class="red-text text-darken-4 modal-trigger">terms and guidelines</a> of the training.</span>
                                 </label>
                             </p>
+                            <div class="modal" id="terms">
+                                <div class="modal-content">
+                                    <h4 class="red-text text-darken-4 center">Training Terms & Guidelines</h4>
+                                    <ol type="disc">
+                                        <li style="font-size: 20px; color: black">I shall pay the training fees as agreed and scheduled.</li>
+                                        <li style="font-size: 20px; color: black">Decision to discontinue with my course of study will not lead to refund of fees paid.</li>
+                                        <li style="font-size: 20px; color: black">Failure to pay the training fees as agreed and scheduled will disqualify me from attending classes.</li>
+                                        <li style="font-size: 20px; color: black">I shall pay for any equipment damaged by me during the training.</li>
+                                        <li style="font-size: 20px; color: black">The training center is not avenue for me to entertain visitors.</li>
+                                        <li style="font-size: 20px; color: black">Changing of lecture time after three (3) weeks is NOT allowed.</li>
+                                        <li style="font-size: 20px; color: black">All complains should be directed to the Customer Service Unit.</li>
+                                        <li style="font-size: 20px; color: black">Urgent/ express collection of Certificate/Diploma attracts a payment of N1,000.00.</li>
+                                        <li style="font-size: 20px; color: black">Noise making in the computer lab is not allowed.</li>
+                                        <li style="font-size: 20px; color: black">Making/Answering of phone calls in not permitted inside the computer lab.</li>
+                                        <li style="font-size: 20px; color: black">Insult and assault of any staff attracts punishment as deemed fit by the authority.</li>
+                                        <li style="font-size: 20px; color: black">No student should sit on a staff seat for any reason.</li>
+                                        <li style="font-size: 20px; color: black">Fighting, stealing, examination malpractice attracts instant dismissal without refund of school fees.</li>
+                                        <li style="font-size: 20px; color: black">Charging of handsets and other devices in the computer lab is at owner’s risk.</li>
+                                        <li style="font-size: 20px; color: black">Eating and drinking in the lab is prohibited.</li>
+                                        <li style="font-size: 20px; color: black">The training center will not repeat lessons missed by me.</li>
+                                        <li style="font-size: 20px; color: black">The training center is not a custodian of students’ money or valuables.</li>
+                                        <li style="font-size: 20px; color: black">Indecent dressing is not allowed in the premises.</li>
+                                        <li style="font-size: 20px; color: black">Headphone/Earpiece/Speakers and cameras are not allowed in the training premises.</li> 
+                                        <li style="font-size: 20px; color: black">Collection of transcript and Certificate/Diploma attracts a payment of N500.00..</li> 
+                                    </ol>
+                                    <div class="modal-footer">
+                                        <a href="#terms" class="modal-close btn red darken-4">Close</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col s12 l6">
-                        <input type="button" value="submit" class="btn-large red darken-4 right">
+                    </div>
+                    <div class="row">
+                        <div class="col s12 l12 center">
+                            <input type="button" value="submit" class="btn-large red darken-4">
                         </div>
                     </div>
                 </form>
@@ -354,13 +356,13 @@
                         <h5 class="white-text text-darken-4">About Us</h5>
                          <p class="white-text text-darken-4">Gateway Computers is a training institution that specializes in qualitative and comprehensive ICT Training, 
                              enhancing the computer proficiency of individuals and organizations in Nigeria. <br><br>
-                            <a href="register.html" href="blank" class="btn white red-text text-darken-4 center">START LEARNING</a>
+                            <a href="#introduction" class="btn white red-text text-darken-4 center">START LEARNING</a>
                             </p>
                     </div>
                      <div class="col s12 l3 push-l1">
                         <h5 class="white-text text-lighten-3">Site Navigation</h5>
                          <ul>
-                            <li><a href="index.html#welcome" class="white-text">Home</a></li>
+                            <li><a href="index.html" class="white-text">Home</a></li>
                             <li><a href="#register_form" class="white-text">Register</a></li>
                             <li><a href="courses.html" target="blank" class="white-text">Courses</a></li>
                             <li><a href="index.html#centers" class="white-text">Centers</a></li>
