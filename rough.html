@@ -7,23 +7,60 @@
      <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="css/materialize.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  
+  <style>
+      header nav{
+          z-index: 2;
+          position: fixed;
+      }
+  </style>
     <title>Document</title>
 </head> 
 <body>
-    <header class="header blue darken-4 white-text center">
-        <h1 style="padding: 10pt;">Rough</h1>
+    <header>
+        <nav class="nav-wrapper white">
+            <div class="container">
+                <a href="index.html" class="brand-logo blue-text text-darken-4">
+                    <img src="img/logo_blue.png" alt="gateway logo" style="width: 250px">
+                </a>
+                <a href="" class="sidenav-trigger" data-target="mobile-tab">
+                    <i class="material-icons blue-text text-darken-4">menu</i>
+                </a>
+                <ul class="hide-on-med-and-down right">
+                    <li><a href="#welcome" class="blue-text text-darken-4 ">Home</a></li>
+                    <li><a href="#centers" class="blue-text text-darken-4">Centers</a></li>
+                    <li><a href="#courses" class="blue-text text-darken-4">Courses</a></li>
+                    <li><a href="/summer.html" target="_blank" class="blue-text text-darken-4">Summer ICT Training</a></li>
+                    <li><a href="#register" class="blue-text text-darken-4">Register</a></li>
+                    <li><a href="#contact" class="blue-text text-darken-4">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <ul class="sidenav striped" id="mobile-tab">
+                <li><a href="#welcome" class="blue-text text-darken-4 ">Home</a></li>
+                <li><a href="#centers" class="blue-text text-darken-4">Centers</a></li>
+                <li><a href="#courses" class="blue-text text-darken-4">Courses</a></li>
+                <li><a href="/summer.html" target="_blank" class="blue-text text-darken-4">Summer ICT Training</a></li>
+                <li><a href="#register" class="blue-text text-darken-4">Register</a></li>
+                <li><a href="#contact" class="blue-text text-darken-4">Contact</a></li>
+                </ul>
+        </div>
     </header>
+
+
     <!-- <div id="content">
         <embed id="plugin" type="application/x-google-chrome-pdf" src="/docs/gateway_courses.pdf" stream-url="chrome-extension://mhjfbmdgcfjbbpaeojofohoefgiehjai/6d920e58-103a-4dc7-aaaa-739e2e7550a1" 
         background-color="0xFF525659" top-toolbar-height="56" javascript="allow" full-frame="">
     </div> -->
+
+
    <!--JQuery Script-->
    <script src="js/jquery-3.3.1.min.js"></script>
    <!-- Compiled and minified JavaScript -->
    <script src="js/materialize.min.js"></script>
    <script>
-       $(Document).ready(function() {
+       $(Document).ready(function(){
+            $('.sidenav').sidenav();
          $('.modal').modal();    
        });
    </script>
