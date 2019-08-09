@@ -62,6 +62,10 @@
             .input-field .prefix.active {
                 color: #01579b;
             }
+            header nav{
+             z-index: 2;
+             position: fixed;
+            }
         </style>
     </head>
     <body>
@@ -74,8 +78,8 @@
                         <img src="img/logo_blue.png" alt="gateway logo" style="width: 250px">
                     </a>
                     <a href="" class="sidenav-trigger" data-target="mobile-tab">
-                            <i class="material-icons blue-text text-darken-4">menu</i>
-                        </a>
+                        <i class="material-icons blue-text text-darken-4">menu</i>
+                    </a>
                     <ul class="hide-on-med-and-down right">
                         <li><a href="#welcome" class="blue-text text-darken-4 ">Home</a></li>
                         <li><a href="#centers" class="blue-text text-darken-4">Centers</a></li>
@@ -84,16 +88,18 @@
                         <li><a href="#register" class="blue-text text-darken-4">Register</a></li>
                         <li><a href="#contact" class="blue-text text-darken-4">Contact</a></li>
                     </ul>
-                    <ul class="sidenav striped" id="mobile-tab">
-                        <li><a href="#welcome" class="blue-text text-darken-4 ">Home</a></li>
-                        <li><a href="#centers" class="blue-text text-darken-4">Centers</a></li>
-                        <li><a href="#courses" class="blue-text text-darken-4">Courses</a></li>
-                        <li><a href="/summer.html" target="_blank" class="blue-text text-darken-4">Summer ICT Training</a></li>
-                        <li><a href="#register" class="blue-text text-darken-4">Register</a></li>
-                        <li><a href="#contact" class="blue-text text-darken-4">Contact</a></li>
-                     </ul>
                 </div>
             </nav>
+            <div class="container">
+                <ul class="sidenav striped" id="mobile-tab">
+                    <li><a href="#welcome" class="blue-text text-darken-4 ">Home</a></li>
+                    <li><a href="#centers" class="blue-text text-darken-4">Centers</a></li>
+                    <li><a href="#courses" class="blue-text text-darken-4">Courses</a></li>
+                    <li><a href="/summer.html" target="_blank" class="blue-text text-darken-4">Summer ICT Training</a></li>
+                    <li><a href="#register" class="blue-text text-darken-4">Register</a></li>
+                    <li><a href="#contact" class="blue-text text-darken-4">Contact</a></li>
+                </ul>
+            </div>
         </header>
         
         <!--Welcome-->
@@ -134,9 +140,9 @@
                             <div class="card-content">
                                 <h5 class="center blue-text text-darken-4">Gateway HQ</h5>
                                 <div class="center"> <a href="" class="btn-floating blue darken-4"><i class="material-icons">room</i></a></div>
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">Gateway Computers, Beirut Road, Kano, Kano State, Nigeria.</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">Beirut Road, Kano, Kano State, Nigeria.</p>
                                 <div class="center"> <a href="" class="btn-floating blue darken-4"><i class="material-icons">phone</i></a></div>
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">07067741045, 08025821492</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">07067741045, 08025821492</p>
                                 <div class="card-action blue darken-4"></div>
                             </div>
                         </div>
@@ -146,9 +152,9 @@
                             <div class="card-content">
                                 <h5 class="center blue-text text-darken-4">Gateway Kubwa</h5>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">room</i></a></div>
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">Opposite St. Luke's Church, Village Market Road, Kubwa, Abuja.</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">Opposite St. Luke's Church, Market Road, Kubwa, Abuja.</p>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">phone</i></a></div>
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">08171408079, 07067741045</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">08171408079, 07067741045</p>
                                 <div class="card-action blue darken-4"></div>
                             </div>
                         </div>
@@ -158,9 +164,9 @@
                             <div class="card-content">
                                 <h5 class="center blue-text text-darken-4">Gateway Gwarinpa</h5>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">room</i></a></div>                                  
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">IFEPS Building, Hiba Plaza, Off 5th Avenue, Gwarinpa, Abuja.</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">IFEPS Building, Off 5th Avenue, Gwarinpa, Abuja.</p>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">phone</i></a></div>
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">07088772859, 09013910658</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">07088772859, 09013910658</p>
                                 <div class="card-action blue darken-4"></div>
                             </div>
                         </div>
@@ -170,9 +176,9 @@
                             <div class="card-content">
                                 <h5 class="center blue-text text-darken-4">Gateway Bwari</h5>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">room</i></a></div>                 
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">Gateway Computers, Opposite JAMB Office, Bwari, FCT, Abuja.</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">Opposite JAMB Office, Bwari, FCT, Abuja.</p>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">phone</i></a></div>
-                                <p class="grey-text text-darken-3 center center" style="font-size: 20px">08163771731, 08025821492</p>
+                                <p class="grey-text text-darken-3 center center" style="font-size: 18px">08163771731, 08025821492</p>
                                 <div class="card-action blue darken-4"></div>
                             </div>
                         </div>
@@ -182,9 +188,9 @@
                             <div class="card-content">
                                 <h5 class="center blue-text text-darken-4">Gateway Hotoro</h5>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">room</i></a></div> 
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">Gateway Computers Gidan Maggi, Kano, Kano State, Nigeria.</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">Gidan Maggi, Kano, Kano State, Nigeria.</p>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">phone</i></a></div>
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">07067741045, 08025821492</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">07067741045, 08025821492</p>
                                 <div class="card-action blue darken-4"></div>
                             </div>
                         </div>
@@ -194,9 +200,9 @@
                             <div class="card-content">
                                 <h5 class="center blue-text text-darken-4">Gateway Ekiti</h5>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">room</i></a></div> 
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">Gateway Computers, Ilupeju, Ekiti State, Nigeria.</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">Gateway Computers, Ilupeju, Ekiti State, Nigeria.</p>
                                 <div class="center"><a href="" class="btn-floating blue darken-4"><i class="material-icons">phone</i></a></div>
-                                <p class="grey-text text-darken-3 center" style="font-size: 20px">07067741045, 08025821492</p>
+                                <p class="grey-text text-darken-3 center" style="font-size: 18px">07067741045, 08025821492</p>
                                 <div class="card-action blue darken-4"></div>
                             </div>          
                         </div>
@@ -218,7 +224,7 @@
                         <a href="courses.html" target="_blank" class="btn-large blue darken-4 modal-trigger">VIEW ALL COURSES</a>
                     </div>
                     <div class="col s6">
-                        <a href="download.html" target="_blank"class="btn-large blue darken-4 white-text">DOWNLOAD PDF</a>
+                        <a href="docs/gateway_courses.pdf" target="_blank"class="btn-large blue darken-4 white-text">DOWNLOAD PDF</a>
                     </div>
                 </div>
                
