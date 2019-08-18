@@ -109,6 +109,19 @@
             z-index: 2;
             position: fixed;
             }
+            ul:not(.browser-default).terms-style{
+                padding-left: 15px !important;
+            }
+            ul:not(.browser-default) > li.terms-style {
+                list-style-type: disc !important;
+                margin-bottom: 5px !important;
+    
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
         </style>
     </head>
     <body>
@@ -123,21 +136,22 @@
                     <a href="" class="sidenav-trigger" data-target="mobile-tab">
                             <i class="material-icons red-text text-darken-4">menu</i>
                         </a>
-                    <ul class="hide-on-med-and-down right">
+                    <ul class="hide-on-med-and-down right" style="list-style-type: none">
                         <li><a href="index.html" class="red-text text-darken-4 ">Home</a></li>
                         <li><a href="index.html#centers" class="red-text text-darken-4">Centers</a></li>
                         <li><a href="courses.html" target="blank" class="red-text text-darken-4">Courses</a></li>
-                        <li><a href="/summer.html" target="blank" class="red-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="./summer.html" target="blank" class="red-text text-darken-4">Summer ICT Training</a></li>
                         <li><a href="#register_form" class="red-text text-darken-4">Register</a></li>
                         <li><a href="index.html#contact" class="red-text text-darken-4">Contact</a></li>
                     </ul>
                 </div>
+            </nav>
                 <div class="container">
-                    <ul class="sidenav striped" id="mobile-tab">
+                    <ul class="sidenav striped" id="mobile-tab" style="list-style-type: none">
                         <li><a href="index.html" class="red-text text-darken-4 ">Home</a></li>
                         <li><a href="index.html#centers" class="red-text text-darken-4">Centers</a></li>
                         <li><a href="courses.html" target="blank" class="red-text text-darken-4">Courses</a></li>
-                        <li><a href="/summer.html" target="blank" class="red-text text-darken-4">Summer ICT Training</a></li>
+                        <li><a href="./summer.html" target="blank" class="red-text text-darken-4">Summer ICT Training</a></li>
                         <li><a href="#register_form" class="red-text text-darken-4">Register</a></li>
                         <li><a href="index.html#contact" class="red-text text-darken-4">Contact</a></li>
                         </ul>
@@ -197,7 +211,7 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12 l4">
-                            <select id="state">
+                            <select id="state" required>
                                 <option value="1">Abia</option>
                                 <option value="2">Adamawa</option>
                                 <option value="3">Akwa Ibom</option>
@@ -239,11 +253,11 @@
                             <label class="red-text text-darken-4">State of Origin*</label>
                         </div>
                         <div class="input-field col s12 l4">
-                            <input type="text" id="phone_number">
+                            <input type="tel" id="phone_number" required>
                             <label for="number" class="red-text text-darken-4">Phone Number*</label>
                         </div>
                         <div class="input-field col s12 l4">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" class="validate" required>
                                 <label for="email" class="red-text text-darken-4">Email Address</label>
                                 <span class="helper-text" data-error="Invalid email address" data-success="Correct email address"></span>
                         </div>
@@ -253,15 +267,15 @@
                     <h5 class="red-text text-darken-4">2. Next-of-Kin Information </h5>
                     <div class="row">
                         <div class="input-field col s12 l4">
-                            <input type="text" id="nfirst_name">
+                            <input type="text" id="nfirst_name" required>
                             <label for="nfirst_name" class="red-text text-darken-4">First Name*</label>
                         </div>
                         <div class="input-field col s12 l4">
-                            <input type="text" id="nlast_name">
+                            <input type="text" id="nlast_name" required>
                             <label for="nlast_name" class="red-text text-darken-4">Last Name*</label>
                         </div>
                         <div class="col input-field s12 l4">
-                            <input type="text" id="nphone">
+                            <input type="tel" id="nphone" minlength="11" maxlength="11" required>
                             <label for="nphone" class="red-text text-darken-4">Phone Number*</label>
                         </div>
                     </div>
@@ -269,7 +283,7 @@
                     <h5 class="red-text text-darken-4">3. Other Details</h5>
                     <div class="row">
                         <div class="input-field col s12 l4">
-                            <select id="course">
+                            <select id="course" required>
                                 <option value="0" selected disabled>Pick an option</option>
                                 <option value="1">CICT</option>
                                 <option value="2">DIT</option>
@@ -287,10 +301,10 @@
                                 <option value="14">DPE</option>
                             </select>
                             <label for="" class="red-text text-darken-4">Course Code*</label>
-                            <p>Browse through our <a href="/courses.html" target="_blank" class="red-text text-darken-4">courses</a> for more info.</p>
+                            <p style="margin-top:-8px; font-size:14px;">Browse through our <a href="./courses.html" target="_blank" class="red-text text-darken-4">courses</a> for more info.</p>
                         </div>
                         <div class="input-field col s12 l4">
-                            <select  id="payment">
+                            <select  id="payment" required>
                                 <option value="0" selected disabled>Pick an Option</option>
                                 <option value="1">Cash</option>
                                 <option value="2">Mobile Transfer</option>
@@ -301,7 +315,7 @@
                             <label class="red-text text-darken-4">Mode of Payment*</label>
                         </div>
                         <div class="input-field col s12 l4">
-                            <input type="text" class="datepicker validate" id="date">
+                            <input type="text" class="datepicker validate" id="date" required>
                             <label for="date" class="red-text text-darken-4 validate">Date of Registration*</label>
                         </div>
                     </div>
@@ -317,28 +331,28 @@
                             <div class="modal" id="terms">
                                 <div class="modal-content">
                                     <h4 class="red-text text-darken-4 center">Training Terms & Guidelines</h4>
-                                    <ol type="disc">
-                                        <li style="font-size: 20px; color: black">I shall pay the training fees as agreed and scheduled.</li>
-                                        <li style="font-size: 20px; color: black">Decision to discontinue with my course of study will not lead to refund of fees paid.</li>
-                                        <li style="font-size: 20px; color: black">Failure to pay the training fees as agreed and scheduled will disqualify me from attending classes.</li>
-                                        <li style="font-size: 20px; color: black">I shall pay for any equipment damaged by me during the training.</li>
-                                        <li style="font-size: 20px; color: black">The training center is not avenue for me to entertain visitors.</li>
-                                        <li style="font-size: 20px; color: black">Changing of lecture time after three (3) weeks is NOT allowed.</li>
-                                        <li style="font-size: 20px; color: black">All complains should be directed to the Customer Service Unit.</li>
-                                        <li style="font-size: 20px; color: black">Urgent/ express collection of Certificate/Diploma attracts a payment of N1,000.00.</li>
-                                        <li style="font-size: 20px; color: black">Noise making in the computer lab is not allowed.</li>
-                                        <li style="font-size: 20px; color: black">Making/Answering of phone calls in not permitted inside the computer lab.</li>
-                                        <li style="font-size: 20px; color: black">Insult and assault of any staff attracts punishment as deemed fit by the authority.</li>
-                                        <li style="font-size: 20px; color: black">No student should sit on a staff seat for any reason.</li>
-                                        <li style="font-size: 20px; color: black">Fighting, stealing, examination malpractice attracts instant dismissal without refund of school fees.</li>
-                                        <li style="font-size: 20px; color: black">Charging of handsets and other devices in the computer lab is at owner’s risk.</li>
-                                        <li style="font-size: 20px; color: black">Eating and drinking in the lab is prohibited.</li>
-                                        <li style="font-size: 20px; color: black">The training center will not repeat lessons missed by me.</li>
-                                        <li style="font-size: 20px; color: black">The training center is not a custodian of students’ money or valuables.</li>
-                                        <li style="font-size: 20px; color: black">Indecent dressing is not allowed in the premises.</li>
-                                        <li style="font-size: 20px; color: black">Headphone/Earpiece/Speakers and cameras are not allowed in the training premises.</li> 
-                                        <li style="font-size: 20px; color: black">Collection of transcript and Certificate/Diploma attracts a payment of N500.00..</li> 
-                                    </ol>
+                                    <ul class="terms-style">
+                                        <li class="terms-style">I shall pay the training fees as agreed and scheduled.</li>
+                                        <li class="terms-style">Decision to discontinue with my course of study will not lead to refund of fees paid.</li>
+                                        <li class="terms-style">Failure to pay the training fees as agreed and scheduled will disqualify me from attending classes.</li>
+                                        <li class="terms-style">I shall pay for any equipment damaged by me during the training.</li>
+                                        <li class="terms-style">The training center is not an avenue for me to entertain visitors.</li>
+                                        <li class="terms-style">Changing of lecture time after three (3) weeks is NOT allowed.</li>
+                                        <li class="terms-style">All complaints should be directed to the Customer Service Unit.</li>
+                                        <li class="terms-style">Urgent/express collection of Certificate/Diploma attracts a payment of N1,000.</li>
+                                        <li class="terms-style">Noise making in the computer lab is not allowed.</li>
+                                        <li class="terms-style">Making/Answering of phone calls is not permitted inside the computer lab.</li>
+                                        <li class="terms-style">Insult and assault of any staff attracts punishment as deemed fit by the authority.</li>
+                                        <li class="terms-style">No student should sit on a staff seat for any reason.</li>
+                                        <li class="terms-style">Fighting, stealing, examination malpractice attracts instant dismissal without refund of school fees.</li>
+                                        <li class="terms-style">Charging of handsets and other devices in the computer lab is at owner’s risk.</li>
+                                        <li class="terms-style">Eating and drinking in the lab is prohibited.</li>
+                                        <li class="terms-style">The training center will not repeat lessons missed by me.</li>
+                                        <li class="terms-style">The training center is not a custodian of students’ money or valuables.</li>
+                                        <li class="terms-style">Indecent dressing is not allowed in the premises.</li>
+                                        <li class="terms-style">Headphone/Earpiece/Speakers and cameras are not allowed in the training premises.</li> 
+                                        <li class="terms-style">Collection of transcript and Certificate/Diploma attracts a payment of N500.00</li> 
+                                    </ul>
                                     <div class="modal-footer">
                                         <a href="#terms" class="modal-close btn red darken-4">Close</a>
                                     </div>
@@ -348,7 +362,7 @@
                     </div>
                     <div class="row">
                         <div class="col s12 l12 center">
-                            <input type="button" value="submit" class="btn-large red darken-4">
+                            <button type="submit" value="Submit" class="btn-large red darken-4">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -373,21 +387,21 @@
                             <li><a href="#register_form" class="white-text">Register</a></li>
                             <li><a href="courses.html" target="blank" class="white-text">Courses</a></li>
                             <li><a href="index.html#centers" class="white-text">Centers</a></li>
-                            <li><a href="/summer.html" target="blank" class="white-text">Summer ICT Training</a></li>
+                            <li><a href="./summer.html" target="blank" class="white-text">Summer ICT Training</a></li>
                         </ul>
                      </div>
-                     <div class="col s12 l3 push-l2">
-                         <h5 class="grey-text text-lighten-3">Social Links</h5>
-                             <a href="www.facebook.com/gatewayabuja" target="blank">
-                                    <i class="fa fa-facebook" style="font-size: 48px; color:white; padding-right: 15px"></i>
-                             </a>
-                             <a href="www.twitter.com/gatewayabuja" target="blank">
-                                    <i class="fa fa-twitter" style="font-size: 48px; color:white; padding-right: 15px"></i>
-                             </a>
-                             <a href="www.instagram.com/gatewayabuja" target="blank">
-                                    <i class="fa fa-instagram" style="font-size: 48px; color:white; padding-right: 15px"></i>
-                             </a>
-                     </div>
+                     <div class="col s12 l3 push-l1">
+                        <h5 class="white-text text-lighten-3">Social Links</h5>
+                            <a href="https://www.facebook.com/gatewayabuja" target="blank">
+                                   <i class="fa fa-facebook" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                            </a>
+                            <a href="https://twitter.com/GatewayCompute5" target="blank">
+                                   <i class="fa fa-twitter" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                            </a>
+                            <a href="https://www.instagram.com/gatewaycomputers" target="blank">
+                                   <i class="fa fa-instagram" style="font-size: 48px; color:white; padding-right: 15px"></i>
+                            </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-copyright grey darken-4 ">
